@@ -19,13 +19,14 @@ class BrowsyText {
   constructor(public data: string) {}
 }
 
-function newTextNode(data: string): BrowsyNode {
+export function newTextNode(data: string): BrowsyNode {
   //Creates a new text node, with <data>
   console.log(data);
   return new BrowsyNode([], new BrowsyText(data));
 }
 
-function newElementNode(
+
+export function newElementNode(
   name: string,
   attrs: AttrMap,
   children: [BrowsyNode]
